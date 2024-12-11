@@ -1,8 +1,6 @@
 <template>
   <main>
-    <div>
-      <p>This is where your main content will be displayed.</p>
-    </div>
+    <slot/>
   </main>
 </template>
 
