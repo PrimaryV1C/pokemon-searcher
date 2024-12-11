@@ -19,6 +19,12 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+header .logo {
+    height: 40px;
+    width: auto;
+}
+
 header nav {
     display: flex;
     gap: 1.5rem;
@@ -62,6 +68,12 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
+}
+
+footer .logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 1rem;
 }
 
 footer .column-title {
