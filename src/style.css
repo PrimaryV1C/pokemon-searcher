@@ -97,6 +97,7 @@ footer nav a {
 footer nav a:hover {
     color: white;
 }
+
 /* Grid Component */
 .grid {
     display: grid;
@@ -115,3 +116,36 @@ footer nav a:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card p {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
