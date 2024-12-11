@@ -20,7 +20,8 @@ export default {
   name: "GridComponent",
   data() {
     return {
-      gridItems: [
+      gridItems: [], // Will be populated with API or fallback data
+      dummyData: [
         {
           id: 1,
           image: "./src/assets/profile-images/mario.webp",
@@ -67,9 +68,19 @@ export default {
     };
   },
   methods: {
+    async fetchGridItems() {
+      try {
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=6");
+        if (!response.ok) {
+          throw new Error("API request failed");
+        }
+        const data = await response.json();
     navigateTo(url) {
       window.location.href = url;
     },
+  },
+  mounted() {
+    this.fetchGridItems();
   },
 };
 </script>
