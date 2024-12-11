@@ -1,5 +1,16 @@
 <template>
   <div>
+    <!-- Search Bar -->
+    <div>
+      <input
+          type="text"
+          v-model="searchQuery"
+          @input="handleSearch"
+          placeholder="Search characters..."
+      />
+    </div>
+
+    <!-- Grid Display -->
     <div class="grid">
       <div
           v-for="item in gridItems"
