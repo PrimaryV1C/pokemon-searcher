@@ -53,3 +53,35 @@ main .content-box {
     text-align: center;
 }
 
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+footer .column-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+footer nav a {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: white;
+}
