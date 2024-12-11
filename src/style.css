@@ -35,3 +35,21 @@ header nav a:hover {
     color: #d1d5db;
 }
 
+/* Main */
+main {
+    flex-grow: 1;
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content-box {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
