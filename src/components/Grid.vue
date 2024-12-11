@@ -13,7 +13,7 @@
     <!-- Grid Display -->
     <div class="grid">
       <div
-          v-for="item in gridItems"
+          v-for="item in filteredGridItems"
           :key="item.id"
           class="card"
           @click="navigateTo(item.url)"
@@ -76,7 +76,19 @@ export default {
           url: "https://www.nintendo.com",
         },
       ],
+      searchQuery: "",
     };
+  },
+  computed: {
+    filteredGridItems() {
+      // Returns grid items filtered by the search query
+      if (this.searchQuery.length < 3) {
+        return this.gridItems; // No filtering for queries < 3 characters
+      }
+      return this.gridItems.filter((item) =>
+          item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
   },
   methods: {
     async fetchGridItems() {
@@ -99,6 +111,9 @@ export default {
         console.error("Failed to fetch data, using dummy data:", error);
         this.gridItems = this.dummyData; // Use dummy data on failure
       }
+    },
+    handleSearch() {
+      console.log("Search Query:", this.searchQuery);
     },
     navigateTo(url) {
       window.open(url, "_blank");
