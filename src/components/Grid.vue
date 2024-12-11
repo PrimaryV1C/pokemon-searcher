@@ -75,8 +75,22 @@ export default {
           throw new Error("API request failed");
         }
         const data = await response.json();
+        this.gridItems = data.results.map((item, index) => ({
+          id: index + 1,
+          title: item.name.charAt(0).toUpperCase() + item.name.slice(1),
+          text: "Click to learn more about this Pokémon!",
+          image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+              index + 1
+          }.png`,
+          url: `https://pokeapi.co/${item.name}`,
+        }));
+      } catch (error) {
+        console.error("Failed to fetch data, using dummy data:", error);
+        this.gridItems = this.dummyData; // Use dummy data on failure
+      }
+    },
     navigateTo(url) {
-      window.location.href = url;
+      window.open(url, "_blank");
     },
   },
   mounted() {
