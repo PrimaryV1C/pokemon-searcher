@@ -11,40 +11,42 @@ body {
 
 /* Header */
 header {
-    background-color: #1f2937;
-    color: white;
+    background-color: #87CEEB;
+    color: #ffffff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    border-bottom: 6px solid #0f172a;
+    padding: 1.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo {
-    height: 40px;
+    height: 55px;
     width: auto;
 }
 
 header nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 5.5vw;
+    margin-right: 2.5rem;
 }
 
 header nav a {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: white;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
     transition: color 0.3s;
 }
 
 header nav a:hover {
-    color: #d1d5db;
+    color: white;
 }
 
 /* Main */
 main {
     flex-grow: 1;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: #f9fafb;
     display: flex;
     justify-content: center;
@@ -61,36 +63,39 @@ main .content-box {
 
 /* Footer */
 footer {
-    background-color: #111827;
-    color: white;
-    padding: 1.5rem;
+    background-color: #87CEEB;
+    color: #ffffff;
+    border-top: 6px solid #0f172a;
+    padding: 2.5rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
 footer .logo {
-    height: 48px;
+    height: 55px;
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-footer .column-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
+footer p,
+footer h1 {
+    color: #0f172a;
 }
 
 footer nav {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 4.5rem;
 }
 
 footer nav a {
-    font-size: 0.875rem;
-    color: #d1d5db;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
     transition: color 0.3s;
 }
 
@@ -101,7 +106,7 @@ footer nav a:hover {
 /* Grid Component */
 .grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(1, 1fr);
 }
 
@@ -141,26 +146,26 @@ footer nav a:hover {
 
 .card h3 {
     margin: 1rem 0 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    color: #0f172a;
 }
 
 .card p {
-    color: #6b7280;
-    font-size: 0.875rem;
+    color: #0f172a;
+    font-size: 1rem;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #d1d5db;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
+
 input[type="text"]:focus {
     outline: none;
     border-color: #2563eb;
     box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
 }
-
-

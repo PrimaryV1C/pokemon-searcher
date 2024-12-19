@@ -2,6 +2,7 @@
   <div>
     <!-- Search Bar -->
     <div>
+      <h1>Search for your favourite Pokemon!</h1>
       <input
           type="text"
           v-model="searchQuery"
