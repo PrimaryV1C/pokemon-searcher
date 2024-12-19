@@ -1,6 +1,6 @@
 Coding Task - Victor Petro
 
-The project uses **Vue.js** and **Tailwind CSS** for creating a responsive and modern user interface.
+The project uses **Vue.js** for creating a responsive and modern user interface.
 
 ## Prerequisites
 Make sure you have the following installed on your system:
